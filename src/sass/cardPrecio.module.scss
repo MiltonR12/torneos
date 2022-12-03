@@ -1,0 +1,22 @@
+@mixin efectoBorde {
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+.contEnlace {
+  list-style: none;
+  color: rgb(233, 233, 233);
+  font-size: 1.3rem;
+  margin: 10px 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  span {
+    color: #ff0000;
+  }
+  &:hover {
+    @include efectoBorde()
+  }
+}
+.activado {
+  @include efectoBorde()
+}

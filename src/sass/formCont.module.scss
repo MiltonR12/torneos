@@ -1,0 +1,91 @@
+.contForm {
+  width: 100%;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  padding: 100px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .formulario {
+    background-color: red;
+    padding: 10px;
+    width: 500px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    .contenedor {
+      background-color: #101010;
+      padding: 20px 50px;
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      border-radius: 10px;
+      h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+        color: #ff0000;
+      }
+      label {
+        font-size: 30px;
+        margin-left: 10px;
+      }
+      input { 
+        width: 100%;
+        height: 40px;
+        margin: 20px 0px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #ff0000;
+        outline: none;
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+      }
+      .btnEnviar {
+        background: none;
+        color: #ff0000;
+        border: 2px solid #ff0000;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 25px;
+        height: auto;
+        transition: .5s ease all;
+      }
+      .btnEnviar:hover {
+        background-color: #d90101;
+        color: #fff;
+      }
+    }
+  }
+  .formulario::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 0, 0, 1) 1%,
+      rgba(3, 3, 3, 1) 50%,
+      rgba(255, 0, 0, 0.9556197478991597) 100%
+    );
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    animation: mover 5s infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes mover {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

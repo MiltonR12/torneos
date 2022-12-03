@@ -1,0 +1,35 @@
+.cuerpoCopas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  .imgCopa {
+    width: 300px;
+    transition: .5s ease all;
+    animation: mover 10s ease;
+    animation-fill-mode: forwards;
+  }
+}
+.cuerpoCopas:hover .imgCopa {
+  animation: none;
+}
+@keyframes mover {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-900px);
+  }
+  50% {
+    z-index: -5;
+    transform: translateY(-100vh);
+  }
+  75% {
+    transform: translateX(100vw);
+  }
+  100% {
+    display: block;
+    transform: translateX(0px);
+  }
+}

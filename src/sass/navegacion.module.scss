@@ -1,0 +1,47 @@
+$colorTxt: #fff;
+$colorActivado: #ff0000;
+
+.contNav {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  z-index: 15;
+  transition: .5s ease all;
+  backdrop-filter: blur(10px);
+  .contLogo {
+    color: $colorTxt;
+    .name {
+      text-decoration: none;
+      font-size: 40px;
+      color: $colorTxt;
+      transition: .5s ease all;
+    }
+    .name:hover {
+      color: $colorActivado;
+    }
+  }
+  .enlace {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 5px 20px;
+    font-size: 25px;
+    transition: .6s ease all;
+  }
+  .activado {
+    color: $colorActivado;
+    border-bottom: 2px solid $colorActivado;
+    font-size: 30px;
+  }
+  .desactivado {
+    color: $colorTxt;
+  }
+  .desactivado:hover {
+    color: $colorActivado;
+    font-size: 30px;
+    border-bottom: 2px solid $colorActivado;
+  }
+}
